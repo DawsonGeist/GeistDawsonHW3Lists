@@ -64,14 +64,19 @@ public class NodeList
 	
 	public void ascendList()
 	{
-		Node temp = root.getNext();
+		Node temp = null;
 		for(int i=0;i<size;i++)
 		{
 			if(root==null)
 				break;
+			if(i==0)
+			{
+				System.out.println(root.toString());
+				temp=root.getNext();
+			}
 			else
 			{
-				temp.toString();
+				System.out.println(temp.toString());
 				temp=temp.getNext();
 			}
 		}
@@ -79,16 +84,14 @@ public class NodeList
 	
 	public void descendList()
 	{
-		int lastID = size-1;
-		Node temp = this.getNodeFromID(lastID);
-		for(int i=size;i<=0;i--)
+		Node temp = null;
+		for(int i=0;i<size;i++)
 		{
-			if(temp==null)
+			if(root==null)
 				break;
 			else
 			{
-				temp.toString();
-				temp=temp.getPrevious();
+				System.out.println(getNodeFromID((size-1)-i));
 			}
 		}
 	}
