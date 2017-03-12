@@ -58,7 +58,7 @@ public class Node
 
 	public String toString() 
 	{
-		return "Order in Alphabet : " + this.id + " Letter : " + this.name;
+		return "Letter: " + this.name + " Order in Alphabet: " + this.id;
 	}
 
 }
