@@ -2,55 +2,63 @@ package hw3;
 
 public class Node 
 {
-	
+
 	private int id;
 	public String name;
 	private Node next;
 	private Node previous;
-	
-	public Node(int id, String content)
+
+	public Node(int id, String content) 
 	{
 		this.id = id;
-		name=content;
-		this.next=null;
+		name = content;
+		this.next = null;
 		this.previous = null;
 	}
-	
-	public Node getNext() {
+
+	public Node getNext() 
+	{
 		return next;
 	}
 
-	public void setNext(Node node) {
+	public void setNext(Node node)
+	{
 		this.next = node;
 	}
-	
-	public Node getPrevious() {
+
+	public Node getPrevious() 
+	{
 		return previous;
 	}
 
-	public void setPrevious(Node node) {
+	public void setPrevious(Node node) 
+	{
 		this.previous = node;
 	}
 
-	public int getId() {
+	public int getId()
+	{
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(int id) 
+	{
 		this.id = id;
 	}
 
-	public String getName() {
+	public String getName() 
+	{
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(String name) 
+	{
 		this.name = name;
 	}
-	
-	public String toString() {
-		return "ID : "+this.id+" Name : "+this.name;
+
+	public String toString() 
+	{
+		return "Order in Alphabet : " + this.id + " Letter : " + this.name;
 	}
 
 }
-
