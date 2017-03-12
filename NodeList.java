@@ -25,6 +25,7 @@ public class NodeList
 			id++;
 			Node newNode = new Node(id, node.getName());
 			currentNode.setNext(newNode);
+			newNode.setPrevious(currentNode);
 		}
 		size++;
 	}
@@ -37,7 +38,7 @@ public class NodeList
  * if the node is found  true is the output; else it is false
  
  */
-	public boolean findNode(String search) 
+	public boolean searchNodeString(String search) 
 	{
 		Node currentNode = root;
 		while (currentNode.getName() != search) 
@@ -47,6 +48,18 @@ public class NodeList
 				return false;
 		}
 		return true;
+	}
+	
+	public Node getNodeFromID(int searchId) 
+	{
+		Node currentNode = root;
+		while (currentNode.getId() != searchId) 
+		{
+			currentNode = currentNode.getNext();
+			if (currentNode == null)
+				return null;
+		}
+		return currentNode;
 	}
 	
 	public void ascendList()
