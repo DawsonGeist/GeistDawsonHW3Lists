@@ -79,7 +79,18 @@ public class NodeList
 	
 	public void descendList()
 	{
-		
+		int lastID = size-1;
+		Node temp = this.getNodeFromID(lastID);
+		for(int i=size;i<=0;i--)
+		{
+			if(temp==null)
+				break;
+			else
+			{
+				temp.toString();
+				temp=temp.getPrevious();
+			}
+		}
 	}
 
 }
