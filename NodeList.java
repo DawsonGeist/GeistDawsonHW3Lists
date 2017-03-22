@@ -179,12 +179,15 @@ public class NodeList
 		{
 			if(eraseThis.getId()==temp.getId()&&i==0)//only node contained in list is root
 			{
-				root = null;
+				root = root.getNext();
+				size--;
+				break;
 			}
 			else if(eraseThis.getId()==temp.getId())
 			{
 				previous.setNext(temp.getNext());//skips the Node that matched the eraseNode
 				size--;
+				break;
 			}
 			else
 			{
