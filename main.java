@@ -49,5 +49,35 @@ public class main
 		{
 			System.out.println("No");
 		}
+		
+		
+		System.out.println("______________________________________________\nAdded in alphabetical order, ID's will ascend if method is correct");
+		NodeList alphabet = new NodeList();
+		
+		Node z = new Node(26,"z");
+		alphabet.addAlphabetically(z);
+		Node x = new Node(24,"x");
+		alphabet.addAlphabetically(x);
+		Node y = new Node(25,"y");
+		alphabet.addAlphabetically(y);
+		Node w = new Node(23,"w");
+		alphabet.addAlphabetically(w);
+		Node a = new Node(1,"a");
+		alphabet.addAlphabetically(a);
+		Node c = new Node(3,"c");
+		alphabet.addAlphabetically(c);
+		
+		System.out.println("Ascend:");
+		alphabet.ascendList();
+		
+		System.out.println("______________________________________________\nDeleting a");
+		
+		alphabet.deleteNode(a);
+		System.out.println("Ascend:");
+		alphabet.ascendList();
+		
+		System.out.println("______________________________________________\nDeleting the whole list");
+		alphabet.deleteList();
+		System.out.println("Size of list: "+alphabet.getSize());
 	}
 }
