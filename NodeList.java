@@ -4,6 +4,11 @@ public class NodeList
 {
 	private int size = 0;
 	private Node root = null;
+	
+	public int getSize()
+	{
+		return size;
+	}
 
 	public void add(Node node) 
 	{
@@ -200,6 +205,12 @@ public class NodeList
 				temp=temp.getNext();
 			}
 		}
+	}
+	
+	public void deleteList()
+	{
+		root = null;
+		size = 0;
 	}
 
 }
